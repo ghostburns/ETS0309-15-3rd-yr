@@ -72,17 +72,76 @@ title_text = text.title()
 print(title_text)  # Output: "Hello, World!"
 ```
 
+### str.capitalize()
+
+Description:
+The str.capitalize() method capitalizes only the first character of the string and converts the rest to lowercase.
+
+Syntax:
+```python
+string.capitalize()
+```
+
+Example:
+```python
+text = "hello, WORLD!"
+capitalized_text = text.capitalize()
+print(capitalized_text)  # Output: "Hello, world!"
+```
+
+### str.swapcase()
+
+Description:
+The str.swapcase() method swaps the case of all letters in the string, converting uppercase-to-lowercase and vice versa.
+
+Syntax:
+```python
+string.swapcase()
+```
+
+Example:
+```python
+text = "Hello, World!"
+swapped_text = text.swapcase()
+print(swapped_text)  # Output: "hELLO, wORLD!"
+```
+
+### str.find()
+
+Description:
+The str.find() method searches for a specified substring and returns the index of its first occurrence. If the substring is not found, it returns -1.
+
+Syntax:
+```python
+string.find(substring, start, end)
+```
+- substring: The text to search for.
+- start (optional): The starting index.
+- end (optional): The ending index.
+
+Example:
+```python
+text = "Hello, World!"
+index = text.find("World")
+print(index)  # Output: 7
+```
+
 ## Summary
  
-
-| **Method** | **Description**                              | **Example Output**  |
-|------------|----------------------------------------------|---------------------|
-| `lower()`  | Converts all letters to lowercase            | `"hello, world!"`   |
-| `upper()`  | Converts all letters to uppercase            | `"HELLO, WORLD!"`   |
-| `title()`  | Capitalizes the first letter of each word    | `"Hello, World!"`   |
+| **Method**     | **Description**                                        | **Example Output**    |
+|----------------|--------------------------------------------------------|-----------------------|
+| `lower()`      | Converts all letters to lowercase                      | `"hello, world!"`     |
+| `upper()`      | Converts all letters to uppercase                      | `"HELLO, WORLD!"`     |
+| `title()`      | Capitalizes the first letter of each word              | `"Hello, World!"`     |
+| `capitalize()` | Capitalizes only the first character, rest lowercase   | `"Hello, world!"`     |
+| `swapcase()`   | Swaps the case of all letters                          | `"hELLO, wORLD!"`     |
+| `find()`       | Returns the index of the first occurrence of substring | 7                     |
 
 ## Use Cases
 
 - **`lower()`**: Useful when performing case-insensitive comparisons.
 - **`upper()`**: Commonly used for formatting user input or making text stand out.
 - **`title()`**: Helpful for formatting titles and names in a readable manner.
+- **`capitalize()`**: Standardizes strings by capitalizing the first letter.
+- **`swapcase()`**: Handy for toggling letter cases.
+- **`find()`**: Valuable for locating substrings efficiently.
