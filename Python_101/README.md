@@ -1,4 +1,4 @@
-# Python String Methods: str.lower(), str.upper(), and str.title()
+# Python String Methods:
 
 ## Overview
 
