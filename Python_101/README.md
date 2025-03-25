@@ -2,13 +2,17 @@
 
 ## Overview
 
-Python provides built-in string methods that allow for easy manipulation of text. Three common methods for changing the case of a string are:
+Python provides built-in string methods for manipulating text including case conversion, substring search, and prefix/suffix verification. Common methods for changing text case include:
+- str.lower(): Converts all characters to lowercase.
+- str.upper(): Converts all characters to uppercase.
+- str.title(): Capitalizes the first letter of each word.
 
-str.lower(): Converts all characters in a string to lowercase.
-
-str.upper(): Converts all characters in a string to uppercase.
-
-str.title(): Capitalizes the first letter of each word in a string.
+- str.capitalize(): Capitalizes only the first character.
+- str.swapcase(): Swaps the case of all letters.
+- str.find(): Returns the index of the first occurrence of a substring.
+- str.index(): Returns the index of the first occurrence; raises an error if not found.
+- str.startswith(): Checks if the string begins with a specified prefix.
+- str.endswith(): Checks if the string ends with a specified suffix.
 
 ## Method Explanations and Examples
 
@@ -126,6 +130,66 @@ index = text.find("World")
 print(index)  # Output: 7
 ```
 
+### str.index()
+
+Description:
+The str.index() method works like find(), but raises a ValueError if the substring is not found.
+
+Syntax:
+```python
+string.index(substring, start, end)
+```
+- substring: The text to search for.
+- start (optional): The starting index.
+- end (optional): The ending index.
+
+Example:
+```python
+text = "Hello, World!"
+index = text.index("World")
+print(index)  # Output: 7
+```
+
+### str.startswith()
+
+Description:
+The str.startswith() method checks if a string starts with a specified prefix. It returns True if it does; otherwise, it returns False.
+
+Syntax:
+```python
+string.startswith(prefix, start, end)
+```
+- prefix: The string to check.
+- start (optional): The starting index.
+- end (optional): The ending index.
+
+Example:
+```python
+text = "Hello, World!"
+result = text.startswith("Hello")
+print(result)  # Output: True
+```
+
+### str.endswith()
+
+Description:
+The str.endswith() method checks if a string ends with a specified suffix. It returns True if it does; otherwise, it returns False.
+
+Syntax:
+```python
+string.endswith(suffix, start, end)
+```
+- suffix: The string to check.
+- start (optional): The starting index.
+- end (optional): The ending index.
+
+Example:
+```python
+text = "Hello, World!"
+result = text.endswith("World!")
+print(result)  # Output: True
+```
+
 ## Summary
  
 | **Method**     | **Description**                                        | **Example Output**    |
@@ -136,12 +200,18 @@ print(index)  # Output: 7
 | `capitalize()` | Capitalizes only the first character, rest lowercase   | `"Hello, world!"`     |
 | `swapcase()`   | Swaps the case of all letters                          | `"hELLO, wORLD!"`     |
 | `find()`       | Returns the index of the first occurrence of substring | 7                     |
+| `index()`      | Returns the index of the first occurrence; error if not found | 7                |
+| `startswith()` | Checks if the string starts with the specified prefix  | True                  |
+| `endswith()`   | Checks if the string ends with the specified suffix    | True                  |
 
 ## Use Cases
 
 - **`lower()`**: Useful when performing case-insensitive comparisons.
-- **`upper()`**: Commonly used for formatting user input or making text stand out.
+- **`upper()`**: Commonly used for formatting user input or emphasizing text.
 - **`title()`**: Helpful for formatting titles and names in a readable manner.
 - **`capitalize()`**: Standardizes strings by capitalizing the first letter.
 - **`swapcase()`**: Handy for toggling letter cases.
 - **`find()`**: Valuable for locating substrings efficiently.
+- **`index()`**: Useful when an error should be raised if a substring is absent.
+- **`startswith()`**: Ideal for verifying the beginning of strings.
+- **`endswith()`**: Ideal for verifying the ending of strings.
