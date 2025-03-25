@@ -6,13 +6,15 @@ Python provides built-in string methods for manipulating text including case con
 - str.lower(): Converts all characters to lowercase.
 - str.upper(): Converts all characters to uppercase.
 - str.title(): Capitalizes the first letter of each word.
-
 - str.capitalize(): Capitalizes only the first character.
 - str.swapcase(): Swaps the case of all letters.
 - str.find(): Returns the index of the first occurrence of a substring.
 - str.index(): Returns the index of the first occurrence; raises an error if not found.
 - str.startswith(): Checks if the string begins with a specified prefix.
 - str.endswith(): Checks if the string ends with a specified suffix.
+- str.count(): Returns the count of non-overlapping occurrences of a substring.
+- str.replace(): Returns a copy of the string with occurrences of a substring replaced.
+- str.strip(): Returns a copy of the string with leading and trailing whitespace removed.
 
 ## Method Explanations and Examples
 
@@ -190,19 +192,80 @@ result = text.endswith("World!")
 print(result)  # Output: True
 ```
 
+### str.count()
+
+Description:
+The str.count() method returns the number of non-overlapping occurrences of a substring in a string.
+
+Syntax:
+```python
+string.count(sub, start, end)
+```
+- sub: The substring to search for.
+- start (optional): The starting index.
+- end (optional): The ending index.
+
+Example:
+```python
+text = "apple, banana, apple"
+count = text.count("apple")
+print(count)  # Output: 2
+```
+
+### str.replace()
+
+Description:
+The str.replace() method returns a copy of the string with all occurrences of a specified substring replaced with another substring.
+
+Syntax:
+```python
+string.replace(old, new, count)
+```
+- old: The substring to be replaced.
+- new: The substring to replace with.
+- count (optional): Maximum number of replacements.
+
+Example:
+```python
+text = "Hello, World!"
+replaced_text = text.replace("World", "Python")
+print(replaced_text)  # Output: "Hello, Python!"
+```
+
+### str.strip()
+
+Description:
+The str.strip() method returns a copy of the string with leading and trailing whitespace removed.
+
+Syntax:
+```python
+string.strip([chars])
+```
+- chars (optional): A string specifying the set of characters to be removed. If omitted, whitespace is removed.
+
+Example:
+```python
+text = "  Hello, World!  "
+stripped_text = text.strip()
+print(stripped_text)  # Output: "Hello, World!"
+```
+
 ## Summary
  
 | **Method**     | **Description**                                        | **Example Output**    |
 |----------------|--------------------------------------------------------|-----------------------|
-| `lower()`      | Converts all letters to lowercase                      | `"hello, world!"`     |
-| `upper()`      | Converts all letters to uppercase                      | `"HELLO, WORLD!"`     |
-| `title()`      | Capitalizes the first letter of each word              | `"Hello, World!"`     |
-| `capitalize()` | Capitalizes only the first character, rest lowercase   | `"Hello, world!"`     |
-| `swapcase()`   | Swaps the case of all letters                          | `"hELLO, wORLD!"`     |
+| `lower()`      | Converts all letters to lowercase                      | "hello, world!"       |
+| `upper()`      | Converts all letters to uppercase                      | "HELLO, WORLD!"       |
+| `title()`      | Capitalizes the first letter of each word              | "Hello, World!"       |
+| `capitalize()` | Capitalizes only the first character, rest lowercase   | "Hello, world!"       |
+| `swapcase()`   | Swaps the case of all letters                          | "hELLO, wORLD!"       |
 | `find()`       | Returns the index of the first occurrence of substring | 7                     |
 | `index()`      | Returns the index of the first occurrence; error if not found | 7                |
 | `startswith()` | Checks if the string starts with the specified prefix  | True                  |
 | `endswith()`   | Checks if the string ends with the specified suffix    | True                  |
+| `count()`      | Counts the occurrences of a substring                  | 2                     |
+| `replace()`    | Replaces occurrences of a substring                    | "Hello, Python!"      |
+| `strip()`      | Removes leading and trailing whitespace                | "Hello, World!"       |
 
 ## Use Cases
 
@@ -215,3 +278,6 @@ print(result)  # Output: True
 - **`index()`**: Useful when an error should be raised if a substring is absent.
 - **`startswith()`**: Ideal for verifying the beginning of strings.
 - **`endswith()`**: Ideal for verifying the ending of strings.
+- **`count()`**: Useful for counting occurrences of a substring.
+- **`replace()`**: Handy for replacing parts of a string.
+- **`strip()`**: Useful for cleaning up strings by removing unwanted whitespace.
