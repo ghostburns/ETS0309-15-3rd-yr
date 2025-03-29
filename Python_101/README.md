@@ -15,6 +15,9 @@ Python provides built-in string methods for manipulating text including case con
 - str.count(): Returns the count of non-overlapping occurrences of a substring.
 - str.replace(): Returns a copy of the string with occurrences of a substring replaced.
 - str.strip(): Returns a copy of the string with leading and trailing whitespace removed.
+- str.lstrip(): Returns a copy of the string with leading whitespace removed.
+- str.rstrip(): Returns a copy of the string with trailing whitespace removed.
+- str.split(): Splits the string into a list of substrings.
 
 ## Method Explanations and Examples
 
@@ -250,6 +253,57 @@ stripped_text = text.strip()
 print(stripped_text)  # Output: "Hello, World!"
 ```
 
+### str.lstrip()
+
+Description:
+The str.lstrip() method returns a copy of the string with leading whitespace (or specified characters) removed.
+
+Syntax:
+```python
+string.lstrip([chars])
+```
+
+Example:
+```python
+text = "   Hello, World!"
+lstripped_text = text.lstrip()
+print(lstripped_text)  # Output: "Hello, World!"
+```
+
+### str.rstrip()
+
+Description:
+The str.rstrip() method returns a copy of the string with trailing whitespace (or specified characters) removed.
+
+Syntax:
+```python
+string.rstrip([chars])
+```
+
+Example:
+```python
+text = "Hello, World!   "
+rstripped_text = text.rstrip()
+print(rstripped_text)  # Output: "Hello, World!"
+```
+
+### str.split()
+
+Description:
+The str.split() method splits a string into a list of substrings using a specified separator. By default, it splits on any whitespace.
+
+Syntax:
+```python
+string.split(sep=None, maxsplit=-1)
+```
+
+Example:
+```python
+text = "Hello, World, Python"
+split_text = text.split(",")
+print(split_text)  # Output: ["Hello", " World", " Python"]
+```
+
 ## Summary
  
 | **Method**     | **Description**                                        | **Example Output**    |
@@ -266,6 +320,9 @@ print(stripped_text)  # Output: "Hello, World!"
 | `count()`      | Counts the occurrences of a substring                  | 2                     |
 | `replace()`    | Replaces occurrences of a substring                    | "Hello, Python!"      |
 | `strip()`      | Removes leading and trailing whitespace                | "Hello, World!"       |
+| `lstrip()`     | Removes leading whitespace or characters               | "Hello, World!"       |
+| `rstrip()`     | Removes trailing whitespace or characters              | "Hello, World!"       |
+| `split()`      | Splits the string into a list by a separator             | ["Hello", "World"]    |
 
 ## Use Cases
 
@@ -281,3 +338,6 @@ print(stripped_text)  # Output: "Hello, World!"
 - **`count()`**: Useful for counting occurrences of a substring.
 - **`replace()`**: Handy for replacing parts of a string.
 - **`strip()`**: Useful for cleaning up strings by removing unwanted whitespace.
+- **`lstrip()`**: Useful for removing leading whitespace or characters.
+- **`rstrip()`**: Useful for removing trailing whitespace or characters.
+- **`split()`**: Useful for splitting a string into a list of substrings.
