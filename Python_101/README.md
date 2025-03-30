@@ -18,6 +18,9 @@ Python provides built-in string methods for manipulating text including case con
 - str.lstrip(): Returns a copy of the string with leading whitespace removed.
 - str.rstrip(): Returns a copy of the string with trailing whitespace removed.
 - str.split(): Splits the string into a list of substrings.
+- str.join(): Joins an iterable of strings using the string as a separator.
+- str.isalpha(): Returns True if all characters in the string are alphabetic.
+- str.isdigit(): Returns True if all characters in the string are digits.
 
 ## Method Explanations and Examples
 
@@ -304,6 +307,55 @@ split_text = text.split(",")
 print(split_text)  # Output: ["Hello", " World", " Python"]
 ```
 
+### str.join()
+
+Description:
+Joins the elements of an iterable into a single string, with the string acting as the separator.
+
+Syntax:
+```python
+separator.join(iterable)
+```
+
+Example:
+```python
+words = ["Hello", "World"]
+sentence = " ".join(words)
+print(sentence)  # Output: "Hello World"
+```
+
+### str.isalpha()
+
+Description:
+Checks whether all characters in the string are alphabetical. Returns True if yes, False otherwise.
+
+Syntax:
+```python
+string.isalpha()
+```
+
+Example:
+```python
+text = "HelloWorld"
+print(text.isalpha())  # Output: True
+```
+
+### str.isdigit()
+
+Description:
+Checks whether all characters in the string are digits. Returns True if yes, False otherwise.
+
+Syntax:
+```python
+string.isdigit()
+```
+
+Example:
+```python
+num = "12345"
+print(num.isdigit())  # Output: True
+```
+
 ## Summary
  
 | **Method**     | **Description**                                        | **Example Output**    |
@@ -322,7 +374,10 @@ print(split_text)  # Output: ["Hello", " World", " Python"]
 | `strip()`      | Removes leading and trailing whitespace                | "Hello, World!"       |
 | `lstrip()`     | Removes leading whitespace or characters               | "Hello, World!"       |
 | `rstrip()`     | Removes trailing whitespace or characters              | "Hello, World!"       |
-| `split()`      | Splits the string into a list by a separator             | ["Hello", "World"]    |
+| `split()`      | Splits the string into a list by a separator           | ["Hello", "World"]    |
+| `join()`       | Joins an iterable of strings using the string as a separator | "Hello World"    |
+| `isalpha()`    | Returns True if all characters are alphabetic          | True                  |
+| `isdigit()`    | Returns True if all characters are digits              | True                  |
 
 ## Use Cases
 
@@ -341,3 +396,6 @@ print(split_text)  # Output: ["Hello", " World", " Python"]
 - **`lstrip()`**: Useful for removing leading whitespace or characters.
 - **`rstrip()`**: Useful for removing trailing whitespace or characters.
 - **`split()`**: Useful for splitting a string into a list of substrings.
+- **`join()`**: Useful for joining elements of an iterable into a single string.
+- **`isalpha()`**: Useful for checking if all characters in a string are alphabetic.
+- **`isdigit()`**: Useful for checking if all characters in a string are digits.
