@@ -3,40 +3,43 @@
 ## Overview
 
 Python provides built-in string methods for manipulating text including case conversion, substring search, and prefix/suffix verification. Common methods for changing text case include:
-- str.lower(): Converts all characters to lowercase.
-- str.upper(): Converts all characters to uppercase.
-- str.title(): Capitalizes the first letter of each word.
-- str.capitalize(): Capitalizes only the first character.
-- str.swapcase(): Swaps the case of all letters.
-- str.find(): Returns the index of the first occurrence of a substring.
-- str.index(): Returns the index of the first occurrence; raises an error if not found.
-- str.startswith(): Checks if the string begins with a specified prefix.
-- str.endswith(): Checks if the string ends with a specified suffix.
-- str.count(): Returns the count of non-overlapping occurrences of a substring.
-- str.replace(): Returns a copy of the string with occurrences of a substring replaced.
-- str.strip(): Returns a copy of the string with leading and trailing whitespace removed.
-- str.lstrip(): Returns a copy of the string with leading whitespace removed.
-- str.rstrip(): Returns a copy of the string with trailing whitespace removed.
-- str.split(): Splits the string into a list of substrings.
-- str.join(): Joins an iterable of strings using the string as a separator.
-- str.isalpha(): Returns True if all characters in the string are alphabetic.
-- str.isdigit(): Returns True if all characters in the string are digits.
+- `str.lower()`: Converts all characters to lowercase.
+- `str.upper()`: Converts all characters to uppercase.
+- `str.title()`: Capitalizes the first letter of each word.
+- `str.capitalize()`: Capitalizes only the first character.
+- `str.swapcase()`: Swaps the case of all letters.
+- `str.find()`: Returns the index of the first occurrence of a substring.
+- `str.index()`: Returns the index of the first occurrence; raises an error if not found.
+- `str.startswith()`: Checks if the string begins with a specified prefix.
+- `str.endswith()`: Checks if the string ends with a specified suffix.
+- `str.count()`: Returns the count of non-overlapping occurrences of a substring.
+- `str.replace()`: Returns a copy of the string with occurrences of a substring replaced.
+- `str.strip()`: Returns a copy of the string with leading and trailing whitespace removed.
+- `str.lstrip()`: Returns a copy of the string with leading whitespace removed.
+- `str.rstrip()`: Returns a copy of the string with trailing whitespace removed.
+- `str.split()`: Splits the string into a list of substrings.
+- `str.join()`: Joins an iterable of strings using the string as a separator.
+- `str.isalpha()`: Returns True if all characters in the string are alphabetic.
+- `str.isdigit()`: Returns True if all characters in the string are digits.
+- `str.isalnum()`: Returns True if all characters in the string are alphanumeric.
+- `str.isspace()`: Returns True if all characters in the string are whitespace.
+- `str.format()`: Formats the string using placeholders.
 
 ## Method Explanations and Examples
 
 ### str.lower()
 
-Description:
+**Description:**
 
-The str.lower() method converts all uppercase letters in a string to lowercase. It does not modify numbers, punctuation, or already lowercase characters.
+The `str.lower()` method converts all uppercase letters in a string to lowercase. It does not modify numbers, punctuation, or already lowercase characters.
 
-Syntax:
+**Syntax:**
 
 ```python
 string.lower()
 ```
 
-Example:
+**Example:**
 
 ```python
 text = "Hello, WORLD!"
@@ -46,17 +49,17 @@ print(lower_text)  # Output: "hello, world!"
 
 ### str.upper()
 
-Description:
+**Description:**
 
-The str.upper() method converts all lowercase letters in a string to uppercase. Like lower(), it does not affect numbers or punctuation.
+The `str.upper()` method converts all lowercase letters in a string to uppercase. Like `lower()`, it does not affect numbers or punctuation.
 
-Syntax:
+**Syntax:**
 
 ```python
 string.upper()
 ```
 
-Example:
+**Example:**
 
 ```python
 text = "Hello, world!"
@@ -66,17 +69,17 @@ print(upper_text)  # Output: "HELLO, WORLD!"
 
 ### str.title()
 
-Description:
+**Description:**
 
-The str.title() method capitalizes the first letter of each word in a string while converting all other letters to lowercase.
+The `str.title()` method capitalizes the first letter of each word in a string while converting all other letters to lowercase.
 
-Syntax:
+**Syntax:**
 
 ```python
 string.title()
 ```
 
-Example:
+**Example:**
 
 ```python
 text = "hello, world!"
@@ -86,15 +89,18 @@ print(title_text)  # Output: "Hello, World!"
 
 ### str.capitalize()
 
-Description:
-The str.capitalize() method capitalizes only the first character of the string and converts the rest to lowercase.
+**Description:**
 
-Syntax:
+The `str.capitalize()` method capitalizes only the first character of the string and converts the rest to lowercase.
+
+**Syntax:**
+
 ```python
 string.capitalize()
 ```
 
-Example:
+**Example:**
+
 ```python
 text = "hello, WORLD!"
 capitalized_text = text.capitalize()
@@ -103,15 +109,18 @@ print(capitalized_text)  # Output: "Hello, world!"
 
 ### str.swapcase()
 
-Description:
-The str.swapcase() method swaps the case of all letters in the string, converting uppercase-to-lowercase and vice versa.
+**Description:**
 
-Syntax:
+The `str.swapcase()` method swaps the case of all letters in the string, converting uppercase-to-lowercase and vice versa.
+
+**Syntax:**
+
 ```python
 string.swapcase()
 ```
 
-Example:
+**Example:**
+
 ```python
 text = "Hello, World!"
 swapped_text = text.swapcase()
@@ -120,18 +129,21 @@ print(swapped_text)  # Output: "hELLO, wORLD!"
 
 ### str.find()
 
-Description:
-The str.find() method searches for a specified substring and returns the index of its first occurrence. If the substring is not found, it returns -1.
+**Description:**
 
-Syntax:
+The `str.find()` method searches for a specified substring and returns the index of its first occurrence. If the substring is not found, it returns -1.
+
+**Syntax:**
+
 ```python
 string.find(substring, start, end)
 ```
-- substring: The text to search for.
-- start (optional): The starting index.
-- end (optional): The ending index.
+- `substring`: The text to search for.
+- `start` (optional): The starting index.
+- `end` (optional): The ending index.
 
-Example:
+**Example:**
+
 ```python
 text = "Hello, World!"
 index = text.find("World")
@@ -140,18 +152,21 @@ print(index)  # Output: 7
 
 ### str.index()
 
-Description:
-The str.index() method works like find(), but raises a ValueError if the substring is not found.
+**Description:**
 
-Syntax:
+The `str.index()` method works like `find()`, but raises a `ValueError` if the substring is not found.
+
+**Syntax:**
+
 ```python
 string.index(substring, start, end)
 ```
-- substring: The text to search for.
-- start (optional): The starting index.
-- end (optional): The ending index.
+- `substring`: The text to search for.
+- `start` (optional): The starting index.
+- `end` (optional): The ending index.
 
-Example:
+**Example:**
+
 ```python
 text = "Hello, World!"
 index = text.index("World")
@@ -160,18 +175,21 @@ print(index)  # Output: 7
 
 ### str.startswith()
 
-Description:
-The str.startswith() method checks if a string starts with a specified prefix. It returns True if it does; otherwise, it returns False.
+**Description:**
 
-Syntax:
+The `str.startswith()` method checks if a string starts with a specified prefix. It returns `True` if it does; otherwise, it returns `False`.
+
+**Syntax:**
+
 ```python
 string.startswith(prefix, start, end)
 ```
-- prefix: The string to check.
-- start (optional): The starting index.
-- end (optional): The ending index.
+- `prefix`: The string to check.
+- `start` (optional): The starting index.
+- `end` (optional): The ending index.
 
-Example:
+**Example:**
+
 ```python
 text = "Hello, World!"
 result = text.startswith("Hello")
@@ -180,18 +198,21 @@ print(result)  # Output: True
 
 ### str.endswith()
 
-Description:
-The str.endswith() method checks if a string ends with a specified suffix. It returns True if it does; otherwise, it returns False.
+**Description:**
 
-Syntax:
+The `str.endswith()` method checks if a string ends with a specified suffix. It returns `True` if it does; otherwise, it returns `False`.
+
+**Syntax:**
+
 ```python
 string.endswith(suffix, start, end)
 ```
-- suffix: The string to check.
-- start (optional): The starting index.
-- end (optional): The ending index.
+- `suffix`: The string to check.
+- `start` (optional): The starting index.
+- `end` (optional): The ending index.
 
-Example:
+**Example:**
+
 ```python
 text = "Hello, World!"
 result = text.endswith("World!")
@@ -200,18 +221,21 @@ print(result)  # Output: True
 
 ### str.count()
 
-Description:
-The str.count() method returns the number of non-overlapping occurrences of a substring in a string.
+**Description:**
 
-Syntax:
+The `str.count()` method returns the number of non-overlapping occurrences of a substring in a string.
+
+**Syntax:**
+
 ```python
 string.count(sub, start, end)
 ```
-- sub: The substring to search for.
-- start (optional): The starting index.
-- end (optional): The ending index.
+- `sub`: The substring to search for.
+- `start` (optional): The starting index.
+- `end` (optional): The ending index.
 
-Example:
+**Example:**
+
 ```python
 text = "apple, banana, apple"
 count = text.count("apple")
@@ -220,18 +244,21 @@ print(count)  # Output: 2
 
 ### str.replace()
 
-Description:
-The str.replace() method returns a copy of the string with all occurrences of a specified substring replaced with another substring.
+**Description:**
 
-Syntax:
+The `str.replace()` method returns a copy of the string with all occurrences of a specified substring replaced with another substring.
+
+**Syntax:**
+
 ```python
 string.replace(old, new, count)
 ```
-- old: The substring to be replaced.
-- new: The substring to replace with.
-- count (optional): Maximum number of replacements.
+- `old`: The substring to be replaced.
+- `new`: The substring to replace with.
+- `count` (optional): Maximum number of replacements.
 
-Example:
+**Example:**
+
 ```python
 text = "Hello, World!"
 replaced_text = text.replace("World", "Python")
@@ -240,16 +267,19 @@ print(replaced_text)  # Output: "Hello, Python!"
 
 ### str.strip()
 
-Description:
-The str.strip() method returns a copy of the string with leading and trailing whitespace removed.
+**Description:**
 
-Syntax:
+The `str.strip()` method returns a copy of the string with leading and trailing whitespace removed.
+
+**Syntax:**
+
 ```python
 string.strip([chars])
 ```
-- chars (optional): A string specifying the set of characters to be removed. If omitted, whitespace is removed.
+- `chars` (optional): A string specifying the set of characters to be removed. If omitted, whitespace is removed.
 
-Example:
+**Example:**
+
 ```python
 text = "  Hello, World!  "
 stripped_text = text.strip()
@@ -258,15 +288,18 @@ print(stripped_text)  # Output: "Hello, World!"
 
 ### str.lstrip()
 
-Description:
-The str.lstrip() method returns a copy of the string with leading whitespace (or specified characters) removed.
+**Description:**
 
-Syntax:
+The `str.lstrip()` method returns a copy of the string with leading whitespace (or specified characters) removed.
+
+**Syntax:**
+
 ```python
 string.lstrip([chars])
 ```
 
-Example:
+**Example:**
+
 ```python
 text = "   Hello, World!"
 lstripped_text = text.lstrip()
@@ -275,15 +308,18 @@ print(lstripped_text)  # Output: "Hello, World!"
 
 ### str.rstrip()
 
-Description:
-The str.rstrip() method returns a copy of the string with trailing whitespace (or specified characters) removed.
+**Description:**
 
-Syntax:
+The `str.rstrip()` method returns a copy of the string with trailing whitespace (or specified characters) removed.
+
+**Syntax:**
+
 ```python
 string.rstrip([chars])
 ```
 
-Example:
+**Example:**
+
 ```python
 text = "Hello, World!   "
 rstripped_text = text.rstrip()
@@ -292,15 +328,18 @@ print(rstripped_text)  # Output: "Hello, World!"
 
 ### str.split()
 
-Description:
-The str.split() method splits a string into a list of substrings using a specified separator. By default, it splits on any whitespace.
+**Description:**
 
-Syntax:
+The `str.split()` method splits a string into a list of substrings using a specified separator. By default, it splits on any whitespace.
+
+**Syntax:**
+
 ```python
 string.split(sep=None, maxsplit=-1)
 ```
 
-Example:
+**Example:**
+
 ```python
 text = "Hello, World, Python"
 split_text = text.split(",")
@@ -309,15 +348,18 @@ print(split_text)  # Output: ["Hello", " World", " Python"]
 
 ### str.join()
 
-Description:
+**Description:**
+
 Joins the elements of an iterable into a single string, with the string acting as the separator.
 
-Syntax:
+**Syntax:**
+
 ```python
 separator.join(iterable)
 ```
 
-Example:
+**Example:**
+
 ```python
 words = ["Hello", "World"]
 sentence = " ".join(words)
@@ -326,15 +368,18 @@ print(sentence)  # Output: "Hello World"
 
 ### str.isalpha()
 
-Description:
-Checks whether all characters in the string are alphabetical. Returns True if yes, False otherwise.
+**Description:**
 
-Syntax:
+Checks whether all characters in the string are alphabetical. Returns `True` if yes, `False` otherwise.
+
+**Syntax:**
+
 ```python
 string.isalpha()
 ```
 
-Example:
+**Example:**
+
 ```python
 text = "HelloWorld"
 print(text.isalpha())  # Output: True
@@ -342,22 +387,83 @@ print(text.isalpha())  # Output: True
 
 ### str.isdigit()
 
-Description:
-Checks whether all characters in the string are digits. Returns True if yes, False otherwise.
+**Description:**
 
-Syntax:
+Checks whether all characters in the string are digits. Returns `True` if yes, `False` otherwise.
+
+**Syntax:**
+
 ```python
 string.isdigit()
 ```
 
-Example:
+**Example:**
+
 ```python
 num = "12345"
 print(num.isdigit())  # Output: True
 ```
 
+### str.isalnum()
+
+**Description:**
+
+The `str.isalnum()` method checks whether all characters in the string are alphanumeric (either alphabets or numbers). It returns `True` if yes, `False` otherwise.
+
+**Syntax:**
+
+```python
+string.isalnum()
+```
+
+**Example:**
+
+```python
+text = "Hello123"
+print(text.isalnum())  # Output: True
+```
+
+### str.isspace()
+
+**Description:**
+
+The `str.isspace()` method checks whether all characters in the string are whitespace characters. It returns `True` if yes, `False` otherwise.
+
+**Syntax:**
+
+```python
+string.isspace()
+```
+
+**Example:**
+
+```python
+text = "   "
+print(text.isspace())  # Output: True
+```
+
+### str.format()
+
+**Description:**
+
+The `str.format()` method formats the string by replacing placeholders with specified values. Placeholders are defined using curly braces `{}`.
+
+**Syntax:**
+
+```python
+string.format(*args, **kwargs)
+```
+
+**Example:**
+
+```python
+text = "Hello, {}. Welcome to {}!"
+formatted_text = text.format("Alice", "Python")
+print(formatted_text)  # Output: "Hello, Alice. Welcome to Python!"
+```
+
 ## Summary
- 
+
 | **Method**     | **Description**                                        | **Example Output**    |
 |----------------|--------------------------------------------------------|-----------------------|
 | `lower()`      | Converts all letters to lowercase                      | "hello, world!"       |
@@ -378,6 +484,9 @@ print(num.isdigit())  # Output: True
 | `join()`       | Joins an iterable of strings using the string as a separator | "Hello World"    |
 | `isalpha()`    | Returns True if all characters are alphabetic          | True                  |
 | `isdigit()`    | Returns True if all characters are digits              | True                  |
+| `isalnum()`    | Returns True if all characters are alphanumeric        | True                  |
+| `isspace()`    | Returns True if all characters are whitespace          | True                  |
+| `format()`     | Formats the string using placeholders                  | "Hello, Alice. Welcome to Python!" |
 
 ## Use Cases
 
@@ -399,3 +508,6 @@ print(num.isdigit())  # Output: True
 - **`join()`**: Useful for joining elements of an iterable into a single string.
 - **`isalpha()`**: Useful for checking if all characters in a string are alphabetic.
 - **`isdigit()`**: Useful for checking if all characters in a string are digits.
+- **`isalnum()`**: Useful for checking if all characters in a string are alphanumeric.
+- **`isspace()`**: Useful for checking if all characters in a string are whitespace.
+- **`format()`**: Useful for formatting strings with placeholders and specified values.
