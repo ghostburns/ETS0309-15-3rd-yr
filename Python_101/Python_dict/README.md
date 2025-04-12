@@ -1,4 +1,4 @@
-# Python Dictionary Methods
+*# Python Dictionary Methods
 
 ## Overview
 
@@ -10,8 +10,6 @@ This document covers common dictionary methods:
 ## Method Explanations and Examples
 
 ### keys()
-
-Description:
 The `keys()` method returns a view object that displays a list of all the keys in the dictionary.
 
 Syntax:
@@ -78,4 +76,4 @@ print(default_value)  # Output: "Not Found"
 
 - **`keys()`**: Useful for iterating over all keys in a dictionary.
 - **`values()`**: Useful for accessing all values in a dictionary.
-- **`get()`**: Useful for safely retrieving a value without raising a `KeyError`.
+- **`get()`**: Useful for safely retrieving a value without raising a `KeyError`.*
